@@ -1,0 +1,38 @@
+Deny from all
+
+Or
+
+RewriteEngine On
+Redirect 404
+
+Or
+
+RewriteEngine On
+RewriteRule .* - [R=404,L]
+
+Or
+
+custom page
+
+ErrorDocument 404 /custompage.php
+
+Or
+
+For stop listing:
+Options -Indexes
+
+For listing:
+Option +Indexes
+
+Or
+
+For allow from some ip/domain
+all from 1.1.1.1 2.2.2.2/24
+
+For deny from some ip/domain /if use subnetmask
+deny from 1.1.1.1 2.2.2.2 3.3.3.3/30
+
+For deny from all
+Deny from all
+
+
